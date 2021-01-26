@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Project1</title>
+    </head>
+    <body>
+        <div>
+            <canvas id="Canv"></canvas>
+        </div>
+        <script>
+            var canv = document.getElementById('Canv');
+            var ctx = canv.getContext('2d');
+            var player1, player2;
+
+            class player{
+                constructor (x, y, width, height){
+                    this.x = x;
+                    this.y = y;
+                    this.name = 'player';
+                    this.width = width;
+                    this.height = height;
+                }
+                dP (){
+                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                }
+            } 
+
+            player1 = new player(100, 100, 15, 15);
+            player2 = new player(100, 100, 15, 15);
+
+            player1.dP();
+            player2.dP();
+
+        </script>
+    </body>
+</html>
